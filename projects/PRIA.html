@@ -1,0 +1,54 @@
+﻿<div class="project">
+    <div class="row">
+        <div class="col-md-6">
+            <img src="img/projects/PRIA/IAFP.jpg" class="img-responsive" style="cursor:pointer" onclick="showImage(this.src, 'img/projects/PRIA/IAFP.jpg');">
+            <div id="largeImgPanel" onclick="this.style.display='none'">
+                <img id="largeImg" style="height:75%; margin:10px; padding:10px;" />
+            </div>
+        </div>
+        <div class="col-md-6 project-info">
+            <a href="javascript:void(0)" class="close" id="close-project"><i class="fa fa-close"></i></a>
+            <h3>Probabilistic Risk Informed Analysis (PRIA)</h3>
+            <p>
+                Co-Project Manager, Principal Investigator, &amp; UI/UX Designer for Probabilistic Risk Informed Analysis (PRIA) 
+                software capability to aid food industry decision makers in addressing food safety concerns.
+            </p>
+
+            <a href="/pria_page.html" class="btn btn-primary" style="margin:5px;">View Project</a>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+            function showImage(smSrc, lgSrc) {
+                document.getElementById('largeImg').src = smSrc;
+                showLargeImagePanel();
+                unselectAll();
+                setTimeout(function() {
+                    document.getElementById('largeImg').src = lgSrc;
+                }, 1)
+            }
+            function showLargeImagePanel() {
+                document.getElementById('largeImgPanel').style.display = 'block';
+            }
+            function unselectAll() {
+                if(document.selection)
+                    document.selection.empty();
+                if(window.getSelection)
+                    window.getSelection().removeAllRanges();
+            }
+</script>
+
+<style type="text/css">
+    #largeImgPanel {
+        text-align: center;
+        display: none;
+        position: fixed;
+        z-index: 100;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(100,100,100, 0.5);
+    }
+</style>

@@ -1,0 +1,53 @@
+﻿<div class="project">
+    <div class="row">
+        <div class="col-md-6">
+            <img src="img/projects/CEO/CEO_1_sm.png" class="img-responsive" style="cursor:pointer" onclick="showImage(this.src, 'img/projects/CEO/CEO_1_sm.png');">
+            <div id="largeImgPanel" onclick="this.style.display='none'">
+                <img id="largeImg" style="height:75%; margin:10px; padding:10px;" />
+            </div>
+        </div>
+        <div class="col-md-6 project-info">
+            <a href="javascript:void(0)" class="close" id="close-project"><i class="fa fa-close"></i></a>
+            <h3>PRIA Briefings</h3>
+            <p>
+                Presenter at many internal and external briefings of the PRIA program (click <a href="/pria_page.html">here</a> to learn more about the program) to 
+                the Battelle CEO &amp; CFO, Battelle Board of Directors, senior advisory groups, journalist, etc. This section contains some of the collateral created for these briefings. 
+            </p>
+            <a href="/ceo_page.html" class="btn btn-primary" style="margin:5px">View Project</a>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+            function showImage(smSrc, lgSrc) {
+                document.getElementById('largeImg').src = smSrc;
+                showLargeImagePanel();
+                unselectAll();
+                setTimeout(function() {
+                    document.getElementById('largeImg').src = lgSrc;
+                }, 1)
+            }
+            function showLargeImagePanel() {
+                document.getElementById('largeImgPanel').style.display = 'block';
+            }
+            function unselectAll() {
+                if(document.selection)
+                    document.selection.empty();
+                if(window.getSelection)
+                    window.getSelection().removeAllRanges();
+            }
+</script>
+
+<style type="text/css">
+    #largeImgPanel {
+        text-align: center;
+        display: none;
+        position: fixed;
+        z-index: 100;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(100,100,100, 0.5);
+    }
+</style>
