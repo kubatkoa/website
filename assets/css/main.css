@@ -2880,10 +2880,25 @@
 		background-repeat: repeat, no-repeat;
 	}
 
+    #ema_intro {
+		background: url("images/overlay.png"), url("../../images/ema_background.jpg");
+		background-size: 256px 256px, cover;
+		background-attachment: fixed, fixed;
+		background-position: top left, bottom center;
+		background-repeat: repeat, no-repeat;
+	}
+
 /* One */
 
 	#one {
 		background: url("images/overlay.png"), url("../../images/bg.jpg");
+		background-size: 256px 256px, cover;
+		background-attachment: fixed, fixed;
+		background-position: top left, center center;
+	}
+
+    	#ema_one {
+		background: url("images/overlay.png"), url("../../images/one.jpg");
 		background-size: 256px 256px, cover;
 		background-attachment: fixed, fixed;
 		background-position: top left, center center;

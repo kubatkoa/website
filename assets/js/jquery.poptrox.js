@@ -276,15 +276,23 @@
 						if (s.indexOf('|') != -1) {
 						    var part = s.split('|');
 						    var a = $('<a>', {
-						        text: $.trim(part[0]),
+						        text: 'Learn More',//$.trim(part[0]),
 						        href: $.trim(part[1]),
+                                class: ' button',
+						    });
+						    $caption.html(function () {
+						        //var emphasis = "<em>" + $("p").length + " paragraphs!</em>";
+						        return $.trim(part[0]) + "  <a class='button btn btn-xs' style='height:75%; line-height:2.5em' href=" + $.trim(part[1]) + ">LEARN MORE</a>";
 						    });
 						}
 						else {
 						    var a = s;
+						    $caption.html(a);
 						}
+                        
+						
 
-						$caption.html(a);
+						//$caption.html(a);
 
 
 						//$caption.html(s);
